@@ -14,12 +14,12 @@ spring:
 
 eureka:
   client:
-    fetchRegistry: false
+    fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
       # Hard coded urls to the other instances in the cluster
-      # ,https://127.0.0.1:8444/eureka/
-      defaultZone: https://localhost:8443/eureka/
+      defaultZone: https://sl01748v.ops.vdab.be:8443/eureka,https://sl01749v.ops.vdab.be:8443/eureka,https://sl01750v.ops.vdab.be:8443/eurekas
+
   server:
     enableSelfPreservation: true
   instance:
