@@ -1,7 +1,7 @@
 server:
   port: 8443
   ssl:
-    enabled: true
+    enabled: false
     keyStoreType: JKS
     key-alias: vdab
     # This should be /etc/ssl/certs/vdab.jks on linux
@@ -18,7 +18,7 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       # Hard coded urls to the other instances in the cluster
-      defaultZone: https://sl01748v.ops.vdab.be:8443/eureka,https://sl01749v.ops.vdab.be:8443/eureka,https://sl01750v.ops.vdab.be:8443/eureka
+      defaultZone: http://sl01748v.ops.vdab.be:8443/eureka,http://sl01749v.ops.vdab.be:8443/eureka,http://sl01750v.ops.vdab.be:8443/eureka
 
   server:
     enableSelfPreservation: true

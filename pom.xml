@@ -44,11 +44,11 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
+        <!-- dependency>
             <groupId>be.vdab</groupId>
             <artifactId>beveiliging</artifactId>
             <version>${vdab-beveiliging-version}</version>
-        </dependency>
+        </dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>

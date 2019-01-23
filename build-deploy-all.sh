@@ -20,5 +20,5 @@ do
     ssh $USER@$SERVER 'sudo mkdir -p /opt/eureka-server; sudo chmod 777 -R /opt/eureka-server/*; sudo rm /opt/eureka-server/nohup.out'
     scp target/$APP-1.0.0.jar $USER@$SERVER:/opt/$APP
     ssh $USER@$SERVER 'sudo chmod 777 /opt/eureka-server/*; '
-    ssh $USER@$SERVER 'cd /opt/eureka-server; java -jar -Dspring.profiles.active=sand-box eureka-server-1.0.0.jar >> nohup.out &' &
+    ssh $USER@$SERVER 'cd /opt/eureka-server; java -Dspring.profiles.active=sand-box -jar eureka-server-1.0.0.jar >> nohup.out &' &
 done
