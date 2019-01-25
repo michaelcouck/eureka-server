@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableEurekaServer
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan({"be.vdab.spring.cloud.security", "be.vdab.spring.cloud.component"})
+@ComponentScan({"be.vdab.spring.cloud", "be.vdab.spring.cloud.component"})
 public class EurekaServer {
 
     public static void main(final String[] args) {
