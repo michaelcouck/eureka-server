@@ -8,7 +8,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>be.vdab</groupId>
+    <groupId>be.belgiantrain</groupId>
     <artifactId>eureka-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -28,7 +28,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 
-        <vdab-beveiliging-version>1.0.0</vdab-beveiliging-version>
+        <security-version>1.0.0</security-version>
     </properties>
 
     <dependencyManagement>
@@ -45,9 +45,9 @@
 
     <dependencies>
         <!-- dependency>
-            <groupId>be.vdab</groupId>
-            <artifactId>beveiliging</artifactId>
-            <version>${vdab-beveiliging-version}</version>
+            <groupId>be.belgiantrain</groupId>
+            <artifactId>security</artifactId>
+            <version>${security-version}</version>
         </dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

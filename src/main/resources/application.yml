@@ -1,11 +1,11 @@
 server:
   port: 8443
   ssl:
-    enabled: true
+    enabled: false
     keyStoreType: JKS
-    key-alias: vdab
-    key-store: C:/etc/ssl/certs/vdab.jks
-    key-store-password: 3DHpdKDFVafErV7X
+    key-alias: selfsigned
+    key-store: /etc/ssl/certs/belgiantrain.jks
+    key-store-password: password
 
 spring:
   application:
@@ -16,7 +16,7 @@ eureka:
     fetchRegistry: false
     registerWithEureka: true
     serviceUrl:
-      defaultZone: https://localhost:8443/eureka/
+      defaultZone: http://10.50.50.37:8443/eureka/
   server:
     enableSelfPreservation: true
   instance:
@@ -24,7 +24,7 @@ eureka:
     hostname: localhost
 
 # Security
-vdab.key-store-certificate: C:/etc/ssl/certs/vdab.jks
-vdab.key-store-password: 3DHpdKDFVafErV7X
-vdab.trust-store-certificate: C:/etc/ssl/certs/vdab.jks
-vdab.trust-store-password: 3DHpdKDFVafErV7X
+belgiantrain.key-store-certificate: /etc/ssl/certs/belgiantrain.jks
+belgiantrain.key-store-password: password
+belgiantrain.trust-store-certificate: /etc/ssl/certs/belgiantrain.jks
+belgiantrain.trust-store-password: password

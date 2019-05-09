@@ -1,4 +1,4 @@
-package be.vdab.spring.cloud.component;
+package be.belgiantrain.ms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableEurekaServer
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan({"be.vdab.spring.cloud", "be.vdab.spring.cloud.component"})
+@ComponentScan({"be.belgiantrain"})
 public class EurekaServer {
 
     public static void main(final String[] args) {

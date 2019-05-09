@@ -3,10 +3,10 @@ server:
   ssl:
     enabled: false
     keyStoreType: JKS
-    key-alias: vdab
-    # This should be /etc/ssl/certs/vdab.jks on linux
-    key-store: /etc/ssl/certs/vdab.jks
-    key-store-password: 3DHpdKDFVafErV7X
+    key-alias: selfsigned
+    # This should be /etc/ssl/certs/belgiantrain.jks on linux
+    key-store: /etc/ssl/certs/belgiantrain.jks
+    key-store-password: password
 
 spring:
   application:
@@ -18,7 +18,7 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       # Hard coded urls to the other instances in the cluster
-      defaultZone: http://sl01748v.ops.vdab.be:8443/eureka,http://sl01749v.ops.vdab.be:8443/eureka,http://sl01750v.ops.vdab.be:8443/eureka
+      defaultZone: http://10.50.50.37:8443/eureka
 
   server:
     enableSelfPreservation: true
@@ -27,7 +27,7 @@ eureka:
     hostname: localhost
 
 # Security
-vdab.key-store-certificate: /etc/ssl/certs/vdab.jks
-vdab.key-store-password: 3DHpdKDFVafErV7X
-vdab.trust-store-certificate: /etc/ssl/certs/vdab.jks
-vdab.trust-store-password: 3DHpdKDFVafErV7X
+belgiantrain.key-store-certificate: /etc/ssl/certs/belgiantrain.jks
+belgiantrain.key-store-password: password
+belgiantrain.trust-store-certificate: /etc/ssl/certs/belgiantrain.jks
+belgiantrain.trust-store-password: password
