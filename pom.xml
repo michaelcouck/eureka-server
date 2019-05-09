@@ -29,6 +29,9 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 
         <security-version>1.0.0</security-version>
+
+        <docker.image.prefix>senpai.azurecr.io</docker.image.prefix>
+        <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -65,6 +68,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>jib-maven-plugin</artifactId>
+                <groupId>com.google.cloud.tools</groupId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:8-jre-alpine</image>
+                    </from>
+                    <to>
+                        <image>${docker.image.prefix}/${project.artifactId}</image>
+                    </to>
+                </configuration>
             </plugin>
         </plugins>
     </build>
