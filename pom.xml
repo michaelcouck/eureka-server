@@ -30,7 +30,7 @@
 
         <security-version>1.0.0</security-version>
 
-        <docker.image.prefix>senpai.azurecr.io</docker.image.prefix>
+        <docker.image.prefix>senpairegistry.azurecr.io</docker.image.prefix>
         <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
     </properties>
 
