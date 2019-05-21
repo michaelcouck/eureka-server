@@ -26,4 +26,4 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8443/eureka,http://localhost:8443/eureka,http://localhost:8443/eureka
+      defaultZone: ${EUREKA_URI:https://eureka-server-1.azurewebsites.net/eureka}
