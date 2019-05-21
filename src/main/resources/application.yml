@@ -16,15 +16,9 @@ eureka:
     fetchRegistry: false
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://10.50.50.37:8443/eureka/
+      defaultZone: http://localhost:8443/eureka/
   server:
     enableSelfPreservation: true
   instance:
     # If there are two running on the same machine this the second one must have host name 127.0.0.1
     hostname: localhost
-
-# Security
-belgiantrain.key-store-certificate: /etc/ssl/certs/belgiantrain.jks
-belgiantrain.key-store-password: password
-belgiantrain.trust-store-certificate: /etc/ssl/certs/belgiantrain.jks
-belgiantrain.trust-store-password: password

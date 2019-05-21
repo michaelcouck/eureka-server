@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author MCOUCK
  * @version 1.00
- * @since 18-12-2018
+ * @since 21-05-2019
  */
 @Configuration
 @EnableEurekaServer

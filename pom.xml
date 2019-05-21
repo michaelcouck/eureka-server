@@ -27,11 +27,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
-
-        <security-version>1.0.0</security-version>
-
-        <docker.image.prefix>senpai.azurecr.io</docker.image.prefix>
-        <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -47,11 +42,6 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- dependency>
-            <groupId>be.belgiantrain</groupId>
-            <artifactId>security</artifactId>
-            <version>${security-version}</version>
-        </dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
@@ -59,6 +49,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -70,16 +61,24 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <artifactId>jib-maven-plugin</artifactId>
-                <groupId>com.google.cloud.tools</groupId>
-                <version>${jib-maven-plugin.version}</version>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>1.5.4</version>
                 <configuration>
-                    <from>
-                        <image>openjdk:8-jre-alpine</image>
-                    </from>
-                    <to>
-                        <image>${docker.image.prefix}/${project.artifactId}</image>
-                    </to>
+                    <deploymentType>jar</deploymentType>
+                    <!-- configure app to run on port 80, required by App Service -->
+                    <appSettings>
+                        <property>
+                            <name>JAVA_OPTS</name>
+                            <value>-Dserver.port=80 -Dspring.profiles.active=application-azure</value>
+                        </property>
+                    </appSettings>
+                    <!-- Web App information -->
+                    <resourceGroup>senpai-microservice-stack</resourceGroup>
+                    <appName>eureka-server-1</appName>
+                    <region>westeurope</region>
+                    <!-- Java Runtime Stack for Web App on Linux-->
+                    <linuxRuntime>jre8</linuxRuntime>
                 </configuration>
             </plugin>
         </plugins>

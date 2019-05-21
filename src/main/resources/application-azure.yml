@@ -1,0 +1,29 @@
+server:
+  port: 80
+  ssl:
+    enabled: false
+    keyStoreType: JKS
+    key-alias: ticketing
+    key-store: /etc/ssl/certs/ticketing.jks
+    key-store-password: password
+
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: azure
+  cloud:
+    config:
+      uri: http://fill-in-config-server-url:8888,http://fill-in-config-server-url:8888,http://fill-in-config-server-url:8888
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8443/eureka,http://localhost:8443/eureka,http://localhost:8443/eureka
