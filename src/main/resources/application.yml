@@ -14,11 +14,8 @@ spring:
 eureka:
   client:
     fetchRegistry: false
-    registerWithEureka: true
+    registerWithEureka: false
     serviceUrl:
       defaultZone: https://azure-dev-belgianrail.be:8446/eureka/
   server:
-    enableSelfPreservation: true
-  instance:
-    # If there are two running on the same machine this the second one must have host name 127.0.0.1
-    hostname: localhost
+    enableSelfPreservation: false
