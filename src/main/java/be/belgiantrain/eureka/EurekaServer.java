@@ -1,4 +1,4 @@
-package be.belgiantrain.ms;
+package be.belgiantrain.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
