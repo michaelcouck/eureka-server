@@ -18,6 +18,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8446/eureka/
   server:
-    enableSelfPreservation: true
+    enableSelfPreservation: false
+    renewal-percent-threshold: 0.85
   instance:
     hostname: localhost
